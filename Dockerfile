@@ -27,5 +27,4 @@ RUN bundle install
 
 RUN test -f tmp/pids/server.pid && rm -f tmp/pids/server.pid; true
 
-RUN ["chmod", "+x", "entrypoint.sh"]
-CMD ["./entrypoint.sh"]
+CMD ["rails", "s", "-b", "0.0.0.0"]
