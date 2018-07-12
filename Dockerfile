@@ -17,13 +17,10 @@ RUN unzip $APP_HOME/vendor/instantclient-basiclite-linux.x64-12.2.0.1.0.zip
 RUN unzip $APP_HOME/vendor/instantclient-sdk-linux.x64-12.2.0.1.0.zip
 RUN unzip $APP_HOME/vendor/instantclient-sqlplus-linux.x64-12.2.0.1.0.zip
 
-RUN echo "$LD_LIBRARY_PATH"
-#RUN ln -s $ORACLE_HOME/instantclient_12_2/libclntsh.so.12.1 libclntsh.so
-
 RUN echo "gem: --no-rdoc --no-ri" >> ~/.gemrc
 
 WORKDIR $APP_HOME
-RUN ln -s $ORACLE_HOME/instantclient_12_2/libclntsh.so.12.1 libclntsh.so && bundle install
+RUN ln -s $ORACLE_HOME/instantclient_12_2/libclntsh.so.12.1 $ORACLE_HOME/instantclient_12_2/libclntsh.so && bundle install
 
 RUN test -f tmp/pids/server.pid && rm -f tmp/pids/server.pid; true
 
