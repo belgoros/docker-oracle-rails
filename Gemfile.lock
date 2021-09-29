@@ -94,7 +94,7 @@ GEM
       racc (~> 1.4)
     puma (3.12.6)
     racc (1.5.2)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rails (5.2.0)
