@@ -92,7 +92,7 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    puma (5.5.1)
+    puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -178,7 +178,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   figaro
   listen (>= 3.0.5, < 3.2)
-  puma (~> 5.5)
+  puma (~> 5.6)
   rails (~> 5.2.0)
   ruby-oci8
   sass-rails (~> 5.0)
